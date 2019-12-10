@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Online Shopping Site</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav id="top-nav">
+            <ul class="flex-row"><a class="logo" href="index.html">Supravi</a>
+                <div class="search-bar">
+                    <form><input type="text" class="search-item" id="myInput"></form>
+                </div>
+                <li><a class="link login" href="login.html">Login</a></li>
+                <li><a class="link sign-up" href="signup.html">Sign Up</a></li>
+                <button id="modalBtn" class="btn shopping-cart"><i class="fa fa-shopping-cart"
+                        aria-hidden="true"></i></button>
+                <div id="simpleModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="closeBtn">&times;</span>
+                            <h2 class="text-center py-2">Shopping Cart</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="cart-items"></div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <form action="">
+                                <h1 class="text-center">Card Details</h1>
+                                <br>
+                                <label for="">First Name
+                                    <input type="text" placeholder="First Name">
+                                </label>
+                                <br>
+                                <label for="">Last Name
+                                    <input type="text" placeholder="Last Name">
+                                </label>
+                                <br>
+
+                                <div class="credit-icons">
+                                    <span class="credit"><i class="fab fa-cc-visa fa-3x"></i></span>
+                                    <span class="credit"><i class="fab fa-cc-mastercard fa-3x"></i></span>
+                                    <span class="credit"><i class="fab fa-cc-paypal fa-3x"></i></span>
+                                    <span class="credit"><i class="fab fa-cc-amex fa-3x"></i></span>
+                                </div>
+
+                                <label for="">Card Number
+                                    <input type="text" placeholder="Credit Card Number">
+                                </label>
+                                <br>
+
+                                <label for="">Expiration date
+                                    <select name="month" id="month">
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+
+                                    <select name="year" id="year">
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                </label>
+                                <br>
+
+                                <label for="">CVV
+                                    <input type="text" placeholder="cvv">
+                                </label>
+                                <br>
+                             
+                            </form>
+                        
+                            <button class="text-center btn btn-purchase" id="check-out">Place Your Order</button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <span class="toggler"><i class="fas fa-bars"></i></span>
+        <nav class="navbar">
+            <ul class="nav-menu flex-row">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link drop-menu"><a href="men.html">Men</a>
+                    <span class="drop-down"><i class="fas fa-sort-down"></i></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="men_top.html">Tops</a></li>
+                        <li><a href="men_bottom.html">Bottoms</a></li>
+                        <li><a href="men_shoes.html">Shoes&Boots</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link drop-menu"><a href="women.html">Women</a>
+                    <span class="drop-down"><i class="fas fa-sort-down"></i></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="women_top.html">Tops</a></li>
+                        <li><a href="women_bottom.html">Bottoms</a></li>
+                        <li><a href="women_shoes.html">Shoes&Boots</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link drop-menu"><a href="accessories.html">Acessories</a>
+                    <span class="drop-down"><i class="fas fa-sort-down"></i></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="accessories_bags.html">Bags</a></li>
+                        <li><a href="accessories_watch.html">Watches</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="product py-2 flex-row">
+            <div class="item-img">
+                <img class="img-item product-img" id="m-fleece-jogger" src="img/mens_bottoms/mens_bottoms8_black.jpg"
+                    alt="">
+            </div>
+            <div class="product-info">
+                <h2 class="item-header title">Men's Logo Fleece Joggers</h2>
+                <span class="price">$24.99</span>
+                <div class="rate">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="size">Size</span>
+                <select name="size" id="size">
+                    <option value="">Select a Size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="x-large">X-Large</option>
+                    <option value="xx-large">XX-Large</option>
+                </select>
+                <!--<div class="flex-row color">
+                    <span id="m-fleece-jogger-black" class="colors black"></span>
+                    <span id="m-fleece-jogger-grey" class="colors heather-grey"></span>
+                    <span id="m-fleece-jogger-green" class="colors green"></span>
+                    <span id="m-fleece-jogger-cobalt" class="colors cobalt"></span>
+                    <span id="m-fleece-jogger-midnight" class="colors midnight"></span>
+                </div>-->
+                <span class="qty">Qty</span>
+                <input type="text" class="cart-quantity-input quantity" id="product-price" size="20">
+                </select>
+                <span class="add-to-cart-btn">Add To Cart</span>
+            </div>
+        </div>
+        <div class="product-description">
+            <h2 class="m-heading text-center">Product Description</h2>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aperiam, aliquam ut
+                repellat cumque, harum iure eos atque eaque dolore excepturi ex! Veritatis eveniet consectetur corrupti,
+                iusto accusantium recusandae numquam nihil reprehenderit, fugit ullam sequi repellendus blanditiis dolor
+                illum aperiam inventore? Dolorum earum magni doloremque magnam sint qui, facilis quisquam! Expedita
+                aliquam qui numquam vero, itaque atque eum cupiditate enim ex facilis, pariatur at in omnis minus libero
+                illum dolores exercitationem saepe fuga perspiciatis cumque dignissimos incidunt excepturi. Assumenda
+                tenetur ducimus, fugiat eaque autem quae officiis tempora voluptas porro laboriosam officia dignissimos
+                velit sapiente sit repudiandae vitae incidunt alias. Ab.</p>
+        </div>
+    </main>
+
+
+    <footer id="top-footer">
+        <div class="footer-content py-2">
+            <div class="credit-card">
+                <h2>Credit Card</h2>
+                <ul>
+                    <li><a href="#">Pay Bill</a></li>
+                    <li><a href="#">Manage Credit Card</a></li>
+                    <li><a href="#">Apply Credit Card</a></li>
+                    <li><a href="#">Check Balance</a></li>
+                    <li><a href="#">Credit Card Benefits</a></li>
+                </ul>
+            </div>
+
+            <div class="customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Rebates</a></li>
+                    <li><a href="#">Same Day Pickup</a></li>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+
+            <div class="shop">
+                <h2>More Ways to shop</h2>
+                <ul>
+                    <li><a href="#">See Our ads</a></li>
+                    <li><a href="#">Coupons</a></li>
+                    <li><a href="#">Download the App</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="newsletter">
+                <h2>Sign Up for your offers</h2>
+                <p class="py-1">By subscribing to our mailing list you will always get latest news and updates from us.
+                </p>
+                <input type="email" placeholder="Enter your email..."><input type="button" class="btn" value="submit">
+                <ul class="social-media-icons flex-row py-3">
+                    <li><a href="#" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <footer id="main-footer">
+        <p>All Rights Reserved 2019&copy;</p>
+    </footer>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="shop.js"></script>
+    <script src="modal.js"></script>
+</body>
+
+</html>

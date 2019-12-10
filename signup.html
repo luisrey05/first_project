@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <title>Online Shopping Site</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav id="top-nav">
+            <ul class="flex-row"><a class="logo" href="index.html">Supravi</a>
+                <div class="search-bar">
+                    <form><input type="text" class="search-item" id="myInput">
+                        <i class="fas fa-search"></i></form>
+                </div>
+                <li><a class="link login" href="login.html">Login</a></li>
+                <li><a class="link sign-up" href="signup.html">Sign Up</a></li>
+                <button id="modalBtn" class="btn shopping-cart"><i class="fa fa-shopping-cart"
+                        aria-hidden="true"></i></button>
+                <div id="simpleModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="closeBtn">&times;</span>
+                            <h2 class="text-center py-2">Shopping Cart</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="cart-items"></div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <form action="">
+                                <h1 class="text-center">Card Details</h1>
+                                <br>
+                                <label for="">First Name
+                                    <input type="text" placeholder="First Name">
+                                </label>
+                                <br>
+                                <label for="">Last Name
+                                    <input type="text" placeholder="Last Name">
+                                </label>
+                                <br>
+
+                                <div class="credit-icons">
+                                    <span class="credit"><i class="fab fa-cc-visa fa-3x"></i></span>
+                                    <span class="credit"><i class="fab fa-cc-mastercard fa-3x"></i></span>
+                                    <span class="credit"><i class="fab fa-cc-paypal fa-3x"></i></span>
+                                    <span class="credit"><i class="fab fa-cc-amex fa-3x"></i></span>
+                                </div>
+
+                                <label for="">Card Number
+                                    <input type="text" placeholder="Credit Card Number">
+                                </label>
+                                <br>
+
+                                <label for="">Expiration date
+                                    <select name="month" id="month">
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+
+                                    <select name="year" id="year">
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                </label>
+                                <br>
+
+                                <label for="">CVV
+                                    <input type="text" placeholder="cvv">
+                                </label>
+                                <br>
+                              
+                            </form>
+                            <!-- <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                  </div> -->
+                            <button class="text-center btn btn-purchase" id="check-out">Place Your Order</button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+
+        <span class="toggler"><i class="fas fa-bars"></i></span>
+        <nav class="navbar">
+            <ul class="nav-menu flex-row">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link drop-menu"><a href="men.html">Men</a>
+                    <span class="drop-down"><i class="fas fa-sort-down"></i></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="men_top.html">Tops</a></li>
+                        <li><a href="men_bottom.html">Bottoms</a></li>
+                        <li><a href="men_shoes.html">Shoes&Boots</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link drop-menu"><a href="women.html">Women</a>
+                    <span class="drop-down"><i class="fas fa-sort-down"></i></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="women_top.html">Tops</a></li>
+                        <li><a href="women_bottom.html">Bottoms</a></li>
+                        <li><a href="women_shoes.html">Shoes&Boots</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link drop-menu"><a href="accessories.html">Acessories</a>
+                    <span class="drop-down"><i class="fas fa-sort-down"></i></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="accessories_bags.html">Bags</a></li>
+                        <li><a href="accessories_watch.html">Watches</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form class="py-3 my-form">
+        <h1 class="text-center py-1">Register</h1>
+        <label>First Name:
+            <input type="text" name="InputFirstName" id="inputfname" required>
+        </label>
+        <br>
+        <br>
+        <label>Last Name:
+            <input type="text" name="InputLastName" id="inputlname" required>
+        </label>
+        <br>
+        <br>
+        <label>Username:
+            <input type="text" name="InputUsername" id="inputUserName" required>
+        </label>
+        <br>
+        <br>
+        <label>Password:
+            <input type="password" name="InputPassword" id="inputPassword" maxlength="8" required>
+        </label>
+        <br>
+        <br>
+        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:
+            <input type="email" name="InputEmail" id="inputEmail" required>
+        </label>
+        <br>
+        <br>
+        <div class="btns">
+            <input type="button" value="Submit" class="btn" id="register-Btn">
+            <input type="reset" value="Clear" class="btn">
+        </div>
+    </form>
+</body>
+<script src="jquery-2.1.4.min.js"></script>
+<script src="shop.js"></script>
+<script src="signup.js"></script>
+<script src="modal.js"></script>
+
+</html>
